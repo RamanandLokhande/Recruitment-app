@@ -1,14 +1,22 @@
-import React, { useState } from 'react';
-import MainPage from './pages/MainPage';
-import './App.css';
-import Login from './pages/login'; // ✅ lowercase path
+// src/App.jsx
+
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import MainPage from './Pages/MainPage';
+import Login from './Pages/login';
+import Signup from './Pages/signup'; // Ensure this file exists in ./Pages
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  return isLoggedIn ? <MainPage /> : <Login />;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
-
-
