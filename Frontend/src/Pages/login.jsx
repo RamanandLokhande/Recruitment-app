@@ -2,31 +2,26 @@ import React from 'react';
 import { FaGoogle, FaLinkedin } from "react-icons/fa";
 
 export default function Login() {
-  // Handler functions for login buttons
   const handleGoogleLogin = () => {
     console.log("Google login clicked - Implement with google");
-    // TODO: Implement Google OAuth
   };
 
   const handleLinkedInLogin = () => {
-    console.log("LinkedIn login clicked - Implement with linkdein");
-    // TODO: Implement LinkedIn OAuth
+    console.log("LinkedIn login clicked - Implement with linkedin");
   };
 
   const handleLogin = () => {
     console.log("Main LOGIN button clicked");
-    // TODO: Handle main login logic
   };
 
   return (
-    <div className="min-h-screen flex items-center align-middle justify-center bg-gradient-to-br from-gray-900 via-indigo-900 to-blue-900
-">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-900 to-blue-900">
       <div className="bg-black p-8 rounded-md shadow-md w-full max-w-sm">
-        <h1 className="text-2xl font-bold text-center mb-6">Login</h1>
+        <h1 className="text-2xl font-bold text-center mb-6 text-white">Login</h1>
 
         {/* Username Input */}
         <div className="mb-4">
-          <label className="block mb-1 text-sm font-medium">Username</label>
+          <label className="block mb-1 text-sm font-medium text-white">Username</label>
           <input
             type="text"
             placeholder="Type your username"
@@ -36,14 +31,14 @@ export default function Login() {
 
         {/* Password Input */}
         <div className="mb-4">
-          <label className="block mb-1 text-sm font-medium">Password</label>
+          <label className="block mb-1 text-sm font-medium text-white">Password</label>
           <input
             type="password"
             placeholder="Type your password"
             className="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-purple-400"
           />
           <div className="text-right mt-1">
-            <a href="#" className="text-sm text-purple-500 hover:underline">
+            <a href="#" className="text-sm text-purple-400 hover:underline">
               Forgot password?
             </a>
           </div>
@@ -57,7 +52,7 @@ export default function Login() {
           Welcome Back
         </button>
 
-        <div className="my-4 text-center text-white-500 text-sm">Or Sign Up Using</div>
+        <div className="my-4 text-center text-gray-300 text-sm">Or Sign Up Using</div>
 
         {/* Social Login Buttons */}
         <div className="flex justify-center gap-4 mb-6">
@@ -67,7 +62,7 @@ export default function Login() {
             className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:scale-105 transition"
             title="Login with LinkedIn"
           >
-            <span className="text-sm font-bold text-gray-700"><linkdein className="jpeg"></linkdein></span>
+            <FaLinkedin className="text-blue-700 text-xl" />
           </button>
 
           {/* Google (Rushi) */}
@@ -76,14 +71,14 @@ export default function Login() {
             className="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center hover:scale-105 transition"
             title="Login with Google"
           >
-            <span className="text-sm font-bold text-gray-700"></span>
+            <FaGoogle className="text-red-500 text-xl" />
           </button>
         </div>
 
         {/* Sign Up Link */}
-        <p className="text-sm text-center text-white-600">
-          Do not have an account?{" "}
-          <a href="#" className="text-purple-500 font-semibold hover:underline">
+        <p className="text-sm text-center text-gray-400">
+          Don’t have an account?{" "}
+          <a href="#" className="text-purple-400 font-semibold hover:underline">
             SIGN UP
           </a>
         </p>
