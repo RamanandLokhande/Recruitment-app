@@ -34,7 +34,7 @@ export default function Signup() {
 
   const validate = () => {
     const newErrors = {};
-    const emailRegex = /^[^\s@]+@gmail\.com$/i; // Gmail-only check
+    const emailRegex = /^[^\s@]+@gmail\.com$/i;
     const phoneRegex = /^[6-9]\d{9}$/;
 
     if (!formData.name.trim()) newErrors.name = 'Name is required';
@@ -54,26 +54,34 @@ export default function Signup() {
   const handleSignup = () => {
     if (validate()) {
       console.log('✅ Signup Successful:', formData);
-      // Optionally clear form
-      // setFormData({ name: '', email: '', mobile: '', password: '', confirmPassword: '' });
     }
   };
 
   const getInputStyle = (field) =>
-    `w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 ${
+    `w-full px-4 py-2 border rounded-md bg-white/80 backdrop-blur-md focus:outline-none focus:ring-2 ${
       errors[field]
         ? 'border-red-500 focus:ring-red-400'
-        : 'border-gray-300 focus:ring-purple-400'
+        : 'border-gray-300 focus:ring-blue-400'
     }`;
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 via-indigo-900 to-blue-900">
-      <div className="bg-black p-8 rounded-md shadow-md w-full max-w-sm">
-        <h1 className="text-2xl font-bold text-center mb-6 text-white">Sign Up</h1>
+    <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center relative px-4"
+      style={{
+        backgroundImage: `url('https://images.unsplash.com/photo-1581091012184-7f5efb160cde?auto=format&fit=crop&w=1950&q=80')`,
+      }}
+    >
+      <div className="absolute inset-0 bg-black bg-opacity-60 z-0" />
+
+      <div className="relative z-10 w-full max-w-md bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl">
+        <div className="text-center mb-6">
+          <h1 className="text-3xl font-extrabold text-blue-700">Join Skillize</h1>
+          <p className="text-sm text-gray-500">Let your skills find the right place</p>
+        </div>
 
         {/* Name */}
         <div className="mb-4">
-          <label className="block text-sm text-white mb-1">Full Name</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
           <input
             ref={inputRefs.name}
             type="text"
@@ -81,15 +89,15 @@ export default function Signup() {
             value={formData.name}
             onChange={handleChange}
             onKeyDown={(e) => handleKeyDown(e, 'email')}
-            placeholder="Enter your full name"
+            placeholder="John Doe"
             className={getInputStyle('name')}
           />
-          {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
+          {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
         </div>
 
         {/* Email */}
         <div className="mb-4">
-          <label className="block text-sm text-white mb-1">Email</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Gmail Address</label>
           <input
             ref={inputRefs.email}
             type="email"
@@ -97,15 +105,15 @@ export default function Signup() {
             value={formData.email}
             onChange={handleChange}
             onKeyDown={(e) => handleKeyDown(e, 'mobile')}
-            placeholder="Enter your Gmail address"
+            placeholder="yourname@gmail.com"
             className={getInputStyle('email')}
           />
-          {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
+          {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email}</p>}
         </div>
 
         {/* Mobile */}
         <div className="mb-4">
-          <label className="block text-sm text-white mb-1">Mobile Number</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number</label>
           <input
             ref={inputRefs.mobile}
             type="tel"
@@ -113,15 +121,15 @@ export default function Signup() {
             value={formData.mobile}
             onChange={handleChange}
             onKeyDown={(e) => handleKeyDown(e, 'password')}
-            placeholder="Enter 10-digit mobile number"
+            placeholder="9876543210"
             className={getInputStyle('mobile')}
           />
-          {errors.mobile && <p className="text-red-400 text-sm mt-1">{errors.mobile}</p>}
+          {errors.mobile && <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>}
         </div>
 
         {/* Password */}
         <div className="mb-4">
-          <label className="block text-sm text-white mb-1">Create Password</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Create Password</label>
           <input
             ref={inputRefs.password}
             type="password"
@@ -129,15 +137,15 @@ export default function Signup() {
             value={formData.password}
             onChange={handleChange}
             onKeyDown={(e) => handleKeyDown(e, 'confirmPassword')}
-            placeholder="Create a password"
+            placeholder="••••••••"
             className={getInputStyle('password')}
           />
-          {errors.password && <p className="text-red-400 text-sm mt-1">{errors.password}</p>}
+          {errors.password && <p className="text-red-500 text-xs mt-1">{errors.password}</p>}
         </div>
 
         {/* Confirm Password */}
         <div className="mb-6">
-          <label className="block text-sm text-white mb-1">Confirm Password</label>
+          <label className="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
           <input
             ref={inputRefs.confirmPassword}
             type="password"
@@ -147,30 +155,31 @@ export default function Signup() {
             onKeyDown={(e) => {
               if (e.key === 'Enter') handleSignup();
             }}
-            placeholder="Confirm your password"
+            placeholder="••••••••"
             className={getInputStyle('confirmPassword')}
           />
           {errors.confirmPassword && (
-            <p className="text-red-400 text-sm mt-1">{errors.confirmPassword}</p>
+            <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>
           )}
         </div>
 
-        {/* Submit Button */}
+        {/* Signup Button */}
         <button
           onClick={handleSignup}
-          className="w-full py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-500 text-white rounded-lg font-semibold hover:opacity-90 transition"
+          className="w-full py-2 bg-blue-600 text-white rounded-md font-semibold hover:bg-blue-700 transition"
         >
           Create Account
         </button>
 
-        {/* Login Link */}
-        <p className="text-sm text-center text-gray-400 mt-6">
-          Already have an account?{" "}
-          <a href="#" className="text-purple-400 font-semibold hover:underline">
-            LOGIN
+        {/* Already have account */}
+        <p className="mt-6 text-center text-sm text-gray-600">
+          Already a member?{" "}
+          <a href="#" className="text-blue-600 font-medium hover:underline">
+            Log In
           </a>
         </p>
       </div>
     </div>
   );
 }
+
