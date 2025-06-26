@@ -7,7 +7,7 @@ import Login from './Pages/login';
 import Signup from './Pages/signup'; 
 import Blog from "./Pages/Blog";
 
-// Ensure this file exists in ./Pages
+
 
 function App() {
   return (
