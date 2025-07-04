@@ -6,7 +6,7 @@ import MainPage from './Pages/MainPage';
 import Login from './Pages/login';
 import Signup from './Pages/signup'; 
 import Blog from "./Pages/Blog";
-
+import Menu from "./pages/Menu";
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/menu" element={<Menu/>} />
               </Routes>
     </Router>
   );
