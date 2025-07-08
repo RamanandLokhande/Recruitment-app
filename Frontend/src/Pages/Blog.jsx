@@ -4,7 +4,7 @@ const Blog = () => {
   const blogs = [
     {
       id: 1,
-      title: "Balancing MPSC Preparation and IT Skills",
+      title: "Welcome laern new skills with us",
       content:
         "Balancing government exam preparation with coding can feel overwhelming. Here’s a realistic strategy to help you manage both...",
     },
