@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGoogle } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate , Link  } from 'react-router-dom';
 
 export default function Login() {
   const navigate = useNavigate();
@@ -88,12 +88,12 @@ export default function Login() {
         </button>
 
         {/* Sign Up Prompt */}
-        <p className="mt-6 text-sm text-center text-gray-600">
-          New to Skillize?{' '}
-          <a href="#" className="text-blue-700 font-semibold hover:underline">
-            Join now
-          </a>
-        </p>
+      <p className="mt-6 text-sm text-center text-gray-600">
+  New to Skillize?{' '}
+  <Link to="/signup" className="text-blue-700 font-semibold hover:underline">
+    Join now
+  </Link>
+</p>
       </div>
     </div>
   );

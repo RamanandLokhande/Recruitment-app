@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-
+import { Link } from 'react-router-dom';
 export default function Signup() {
   const [formData, setFormData] = useState({
     name: '',
@@ -173,11 +173,11 @@ export default function Signup() {
 
         {/* Already have account */}
         <p className="mt-6 text-center text-sm text-gray-600">
-          Already a member?{" "}
-          <a href="#" className="text-blue-600 font-medium hover:underline">
-            Log In
-          </a>
-        </p>
+  Already a member?{' '}
+  <Link to="/login" className="text-blue-600 font-medium hover:underline">
+    Log In
+  </Link>
+</p>
       </div>
     </div>
   );
