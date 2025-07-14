@@ -6,9 +6,10 @@ import MainPage from './Pages/MainPage';
 import Login from './Pages/login';
 import Signup from './Pages/signup'; 
 import Internship from './pages/Internship';
-  import Placement from './Pages/Placement';
+import Placement from './Pages/Placement';
 import AboutUS  from './Pages/AboutUS';
 import HireFromUs from './Pages/HireFromUs';
+
 
 function App() {
   return (

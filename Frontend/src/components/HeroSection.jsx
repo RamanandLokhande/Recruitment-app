@@ -74,15 +74,11 @@ history
               </a>
             </div>
           </div>
-         
-           <img
-  src={officeImage}
-  alt="Career"
-  className="rounded-xl shadow-lg w-full"
-/>
-
-
-
+             <img
+              src={officeImage}
+              alt="Career"
+              className="rounded-xl shadow-lg w-full"
+            />
         </div>
       </section>
     </>
