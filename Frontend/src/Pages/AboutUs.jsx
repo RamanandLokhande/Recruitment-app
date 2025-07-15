@@ -2,22 +2,22 @@ import React from 'react';
 
 const team = [
   {
-    name: 'Ritika Mehra',
+    name: 'Rohit Yamgar',
     role: 'Co-Founder & CEO',
-    image: 'https://source.unsplash.com/featured/?woman,ceo',
-    linkedin: 'https://linkedin.com/in/ritikamehra',
+    image: 'https://source.unsplash.com/featured/?man,ceo',
+    linkedin: 'https://linkedin.com/in/rohit-yamgar',
   },
   {
-    name: 'Aryan Kapoor',
+    name: 'Manish Patil',
     role: 'Head of Engineering',
     image: 'https://source.unsplash.com/featured/?man,developer',
-    linkedin: 'https://linkedin.com/in/aryankapoor',
+    linkedin: 'https://linkedin.com/in/manish-patil',
   },
   {
-    name: 'Sana Qureshi',
+    name: 'Swaraj Shedge',
     role: 'Design Lead',
     image: 'https://source.unsplash.com/featured/?woman,designer',
-    linkedin: 'https://linkedin.com/in/sanaqureshi',
+    linkedin: 'https://linkedin.com/in/swaraj-shedge',
   },
 ];
 
