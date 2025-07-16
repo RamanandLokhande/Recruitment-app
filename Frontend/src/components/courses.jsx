@@ -5,25 +5,25 @@ const courses = [
     id: 1,
     title: "Web Development Bootcamp",
     description: "Learn HTML, CSS, JavaScript and build real-world projects.",
-    image: "https://source.unsplash.com/400x250/?coding,web",
+    image: "https://images.pexels.com/photos/32342294/pexels-photo-32342294.jpeg",
   },
   {
     id: 2,
     title: "React Mastery",
     description: "Master React.js with hooks, context API, and real apps.",
-    image: "https://source.unsplash.com/400x250/?react,code",
+    image: "https://images.pexels.com/photos/11035471/pexels-photo-11035471.jpeg",
   },
   {
     id: 3,
     title: "Data Science with Python",
     description: "Dive into Pandas, NumPy, and Machine Learning.",
-    image: "https://source.unsplash.com/400x250/?data,python",
+    image: "https://images.pexels.com/photos/6120214/pexels-photo-6120214.jpeg",
   },
   {
     id: 4,
     title: "UI/UX Design Fundamentals",
     description: "Design beautiful, user-friendly interfaces from scratch.",
-    image: "https://source.unsplash.com/400x250/?design,ui",
+    image: "https://images.pexels.com/photos/6593545/pexels-photo-6593545.jpeg",
   },
 ];
 

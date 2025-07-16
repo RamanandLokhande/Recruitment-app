@@ -19,23 +19,9 @@ history
             <p className="text-lg mt-4 text-gray-600">
               Discover top roles from leading companies and gain real experience.
             </p>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <button
-                onClick={() => navigate('/internships')}
-                className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
-              >
-                Explore Opportunities
-              </button>
-              <a href="#recruiter" className="border border-blue-600 text-blue-600 px-6 py-3 rounded hover:bg-blue-100 transition">
-                Hire Talent
-              </a>
-            </div>
+            
           </div>
-             <img
-              src={officeImage}
-              alt="Career"
-              className="rounded-xl shadow-lg w-full"
-            />
+           <img className="w-full max-w-md rounded-lg hover:shadow-lg mx-auto" src="https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg" alt="" />
         </div>
       </section>
       
