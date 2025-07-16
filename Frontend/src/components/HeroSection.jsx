@@ -9,7 +9,36 @@ const HeroSection = () => {
 history
   return (
     <>
-      {/* 🌟 Layout Option 1: Light background, minimal style */}
+          {/* 💼 Layout Option 3: Split 2-column layout for large screens */}
+      <section className="bg-white py-20 px-6 lg:px-32">
+        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">
+              Internships that match your ambition
+            </h2>
+            <p className="text-lg mt-4 text-gray-600">
+              Discover top roles from leading companies and gain real experience.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-4">
+              <button
+                onClick={() => navigate('/internships')}
+                className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+              >
+                Explore Opportunities
+              </button>
+              <a href="#recruiter" className="border border-blue-600 text-blue-600 px-6 py-3 rounded hover:bg-blue-100 transition">
+                Hire Talent
+              </a>
+            </div>
+          </div>
+             <img
+              src={officeImage}
+              alt="Career"
+              className="rounded-xl shadow-lg w-full"
+            />
+        </div>
+      </section>
+      
       <section className="bg-blue-50 py-20 px-6 md:px-16 lg:px-32 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-800 leading-tight">
@@ -52,35 +81,7 @@ history
         </div>
       </section>
 
-      {/* 💼 Layout Option 3: Split 2-column layout for large screens */}
-      <section className="bg-white py-20 px-6 lg:px-32">
-        <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-800">
-              Internships that match your ambition
-            </h2>
-            <p className="text-lg mt-4 text-gray-600">
-              Discover top roles from leading companies and gain real experience.
-            </p>
-            <div className="mt-6 flex flex-wrap gap-4">
-              <button
-                onClick={() => navigate('/internships')}
-                className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
-              >
-                Explore Opportunities
-              </button>
-              <a href="#recruiter" className="border border-blue-600 text-blue-600 px-6 py-3 rounded hover:bg-blue-100 transition">
-                Hire Talent
-              </a>
-            </div>
-          </div>
-             <img
-              src={officeImage}
-              alt="Career"
-              className="rounded-xl shadow-lg w-full"
-            />
-        </div>
-      </section>
+
     </>
   );
 };
