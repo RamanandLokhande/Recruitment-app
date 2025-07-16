@@ -23,10 +23,10 @@ function Navbar() {
        <div className="hidden lg:flex items-centre justify-between w-full">
   {/* Left group of links */}
   <div className="flex space-x-1">
-    <span onClick={() => navigate('/internships')} className="text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">Internships</span>
-    <span onClick={() => navigate('/placements')} className="underline text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">Placements</span>
-    <span onClick={() => navigate('/Aboutus')} className="underline text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">About Us</span>
-    <span onClick={() => navigate('/HireFromUs')} className="underline text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">Hire From Us</span>
+    <span onClick={() => navigate('/internships')} className="text-blue-600 text-lg px-4 py-2 rounded hover:cursor-pointer hover:underline">Internships</span>
+    <span onClick={() => navigate('/placements')} className="text-blue-600 text-lg px-4 py-2 rounded hover:cursor-pointer hover:underline">Placements</span>
+    <span onClick={() => navigate('/Aboutus')} className="text-blue-600 text-lg px-4 py-2 rounded hover:cursor-pointer hover:underline">About Us</span>
+    <span onClick={() => navigate('/HireFromUs')} className="text-blue-600 text-lg px-4 py-2 rounded hover:cursor-pointer hover:underline">Hire From Us</span>
   </div>
 
   {/* Right group of links */}
