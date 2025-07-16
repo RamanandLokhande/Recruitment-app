@@ -7,7 +7,7 @@ function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
-      <div className="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div className="container mx-auto px-4 py-3 flex">
         {/* Logo */}
         <div className="text-2xl font-bold text-blue-600">Nextintern</div>
 
@@ -20,19 +20,27 @@ function Navbar() {
         </button>
 
         {/* Menu - large screens */}
-        <div className="hidden lg:flex gap-3">
-          <button onClick={() => navigate('/internships')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Internships</button>
-          <button onClick={() => navigate('/placements')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Placements</button>
-          <button onClick={() => navigate('/Aboutus')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">About Us</button>
-          <button onClick={() => navigate('/HireFromUs')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Hire From Us</button>
-          <button onClick={() => navigate('/login')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</button>
-          <button onClick={() => navigate('/signup')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Sign Up</button>
-        </div>
+       <div className="hidden lg:flex items-centre justify-between w-full">
+  {/* Left group of links */}
+  <div className="flex space-x-1">
+    <span onClick={() => navigate('/internships')} className="text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">Internships</span>
+    <span onClick={() => navigate('/placements')} className="underline text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">Placements</span>
+    <span onClick={() => navigate('/Aboutus')} className="underline text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">About Us</span>
+    <span onClick={() => navigate('/HireFromUs')} className="underline text-blue-600 px-4 py-2 rounded hover:cursor-pointer underline">Hire From Us</span>
+  </div>
+
+  {/* Right group of links */}
+  <div className="flex space-x-1">
+    <button onClick={() => navigate('/login')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</button>
+    <button onClick={() => navigate('/signup')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Sign Up</button>
+  </div>
+</div>
+
       </div>
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="lg:hidden flex flex-col px-4 pb-4 gap-2">
+        <div className="lg:hidden flex flex-col px-4 pb-4 gap-2 w-full">
           <button onClick={() => navigate('/internships')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Internships</button>
           <button onClick={() => navigate('/placements')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Placements</button>
           <button onClick={() => navigate('/Aboutus')} className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">About Us</button>
