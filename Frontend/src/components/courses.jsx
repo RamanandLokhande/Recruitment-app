@@ -43,41 +43,45 @@ const cardVariants = {
 
 const Courses = () => {
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 p-8 md:p-16">
       <motion.h1
-        className="text-4xl font-bold text-center mb-10 text-gray-800"
+        className="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-gray-800 tracking-tight"
         initial={{ opacity: 0, y: -30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        Our Courses
+        Our Trending Courses
       </motion.h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {courses.map((course, i) => (
           <motion.div
             key={course.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-transform hover:-translate-y-2"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             custom={i}
           >
-            <img
-              src={course.image}
-              alt={course.title}
-              className="w-full h-48 object-cover"
-            />
-            <div className="p-5">
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">
+            <div className="overflow-hidden">
+              <img
+                src={course.image}
+                alt={course.title}
+                className="w-full h-56 object-cover rounded-t-3xl transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+            <div className="p-6">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-3">
                 {course.title}
               </h2>
-              <p className="text-gray-600 mb-4">{course.description}</p>
+              <p className="text-gray-600 mb-6 text-base leading-relaxed">
+                {course.description}
+              </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition"
+                className="bg-blue-600 w-full text-white py-3 rounded-xl text-lg font-medium hover:bg-blue-700 transition"
               >
                 Enroll Now
               </motion.button>
