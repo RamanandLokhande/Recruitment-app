@@ -25,8 +25,8 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.img
-            className="w-full max-w-md rounded-lg hover:shadow-lg mx-auto"
-            src="https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg"
+            className="w-[65vw] h-[45vh] rounded-lg hover:shadow-lg"
+            src="https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?q=80&w=1380&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Office work"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
@@ -61,12 +61,6 @@ const HeroSection = () => {
               className="bg-blue-600 text-white px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition"
             >
               Get Started
-            </button>
-            <button
-              onClick={() => navigate('/aboutus')}
-              className="bg-white border border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-50 transition"
-            >
-              Learn More
             </button>
           </motion.div>
         </motion.div>
