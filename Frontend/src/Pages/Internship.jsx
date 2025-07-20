@@ -48,36 +48,48 @@ const internships = [
 
 export default function Internship() {
   return (
-    <div className="p-6 md:p-10 min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-700 mb-4">Explore Internships</h1>
-      <p className="text-lg text-gray-700 mb-8">
-        Discover exciting internship opportunities tailored for students and freshers.
-      </p>
+    <div className="relative min-h-screen">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center z-0"
+        style={{
+          backgroundImage:
+            "url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1600&q=80')",
+        }}
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-50 z-0" />
 
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-        {internships.map((internship, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transform transition hover:-translate-y-1"
-          >
-            <img
-              src={internship.image}
-              alt={internship.title}
-              className="h-48 w-full object-cover"
-            />
-            <div className="p-5">
-              <h2 className="text-xl font-semibold text-gray-800">{internship.title}</h2>
-              <p className="text-gray-600 mt-1">Company: {internship.company}</p>
-              <p className="text-gray-600">Location: {internship.location}</p>
-              <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition w-full">
-                View Details
-              </button>
+      {/* Content */}
+      <div className="relative z-10 p-6 md:p-10 text-white">
+        <h1 className="text-4xl font-bold text-white mb-4">Explore Internships</h1>
+        <p className="text-lg mb-8">
+          Discover exciting internship opportunities tailored for students and freshers.
+        </p>
+
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {internships.map((internship, index) => (
+            <div
+              key={index}
+              className="bg-white/90 text-gray-800 rounded-xl shadow-md overflow-hidden hover:shadow-xl transform transition hover:-translate-y-1 backdrop-blur-md"
+            >
+              <img
+                src={internship.image}
+                alt={internship.title}
+                className="h-48 w-full object-cover"
+              />
+              <div className="p-5">
+                <h2 className="text-xl font-semibold">{internship.title}</h2>
+                <p className="text-gray-700 mt-1">Company: {internship.company}</p>
+                <p className="text-gray-700">Location: {internship.location}</p>
+                <button className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition w-full">
+                  View Details
+                </button>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
 }
-
-
