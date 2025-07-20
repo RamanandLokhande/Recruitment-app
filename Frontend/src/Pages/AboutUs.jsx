@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import rohitImg from "../assets/rohit_img.jpg";
 import swarajImg from "../assets/swaraj_img.jpg";
-import manishImg from "../assets/manish_img.jpg";
+import manishImg from "../assets/manish1_img.jpg";
 
 
 const team = [

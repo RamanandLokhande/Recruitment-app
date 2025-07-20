@@ -8,7 +8,6 @@ const HeroSection = () => {
 
   return (
     <>
-
       {/* 💼 Layout Option 3 */}
       <section className="bg-white py-20 px-6 lg:px-32">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
@@ -23,13 +22,12 @@ const HeroSection = () => {
             <p className="text-lg mt-4 text-gray-600">
               Discover top roles from leading companies and gain real experience.
             </p>
-
           </motion.div>
 
           <motion.img
             className="w-full max-w-md rounded-lg hover:shadow-lg mx-auto"
             src="https://images.pexels.com/photos/5256816/pexels-photo-5256816.jpeg"
-            alt=""
+            alt="Office work"
             initial={{ scale: 0.8, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -38,12 +36,7 @@ const HeroSection = () => {
       </section>
 
       {/* 🚀 Blue highlight section */}
-<<<<<<< HEAD
       <section className="bg-gradient-to-br from-blue-100 via-white to-blue-50 py-20 px-6 lg:px-32 text-center">
-=======
-
-      <section className="bg-blue-50 py-20 px-6 md:px-16 lg:px-32 text-center">
->>>>>>> 3602ddec2cf514227c87eac216b1e3c742634416
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
@@ -99,7 +92,6 @@ const HeroSection = () => {
           <p className="text-xl mt-4 text-gray-200">
             Internships, jobs, and growth opportunities tailored for you.
           </p>
-
         </motion.div>
       </section>
     </>
