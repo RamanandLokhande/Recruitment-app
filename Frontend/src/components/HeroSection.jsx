@@ -57,7 +57,7 @@ const HeroSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <button
-              onClick={() => navigate('/internships')}
+              onClick={() => navigate('/login')}
               className="bg-blue-600 text-white px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition"
             >
               Get Started
