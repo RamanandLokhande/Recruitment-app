@@ -1,31 +1,37 @@
-import React from 'react';
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const team = [
   {
-    name: 'Rohit Yamgar',
-    role: 'Co-Founder & CEO',
-    image: 'https://source.unsplash.com/featured/?man,ceo',
-    linkedin: 'https://linkedin.com/in/rohit-yamgar',
+    name: "Rohit Yamgar",
+    role: "Co-Founder & CEO",
+    image: "https://source.unsplash.com/featured/?man,ceo",
+    linkedin: "https://linkedin.com/in/rohit-yamgar",
   },
   {
-    name: 'Manish Patil',
-    role: 'Head of Engineering',
-    image: 'https://source.unsplash.com/featured/?man,developer',
-    linkedin: 'https://linkedin.com/in/manish-patil',
+    name: "Manish Patil",
+    role: "Head of Engineering",
+    image: "Frontend/src/assets/manishphoto.jpeg",
+    linkedin: "https://linkedin.com/in/manish-patil",
   },
   {
-    name: 'Swaraj Shedge',
-    role: 'Design Lead',
-    image: 'https://source.unsplash.com/featured/?woman,designer',
-    linkedin: 'https://linkedin.com/in/swaraj-shedge',
+    name: "Swaraj Shedge",
+    role: "Design Lead",
+    image: "https://source.unsplash.com/featured/?woman,designer",
+    linkedin: "https://linkedin.com/in/swaraj-shedge",
   },
 ];
 
 export default function AboutUs() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="bg-white text-gray-800">
 
-      {/* Hero Section with Background Image */}
+      {/* Hero Section */}
       <section className="relative py-24 px-6 text-center text-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center z-0"
@@ -35,8 +41,7 @@ export default function AboutUs() {
           }}
         />
         <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-0" />
-
-        <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="relative z-10 max-w-4xl mx-auto" data-aos="fade-up">
           <h1 className="text-5xl font-extrabold mb-6 drop-shadow-lg">
             About <span className="text-blue-400">NextIntern</span>
           </h1>
@@ -48,24 +53,23 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Mission & Vision with Background */}
+      {/* Mission & Vision */}
       <section className="relative py-20 px-6 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
           style={{
-            backgroundImage:
-              "url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1600&q=80')",
+            backgroundImage: "url('Frontend/src/assets/manishphoto.jpeg')",
           }}
         />
         <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
+          <div data-aos="fade-right">
             <h2 className="text-3xl font-bold text-blue-600 mb-4">🚀 Our Mission</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
               To provide accessible, high-quality internships and career guidance for students and early professionals,
               enabling them to gain hands-on experience and launch successful careers.
             </p>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <h2 className="text-3xl font-bold text-blue-600 mb-4">🎯 Our Vision</h2>
             <p className="text-gray-700 leading-relaxed text-lg">
               We envision a future where every student, regardless of background, has access to real-world experiences
@@ -75,9 +79,12 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Stats Section with Light Background */}
+      {/* Stats Section */}
       <section className="bg-gray-100 py-20 px-6">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 text-center gap-10">
+        <div
+          className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 text-center gap-10"
+          data-aos="fade-up"
+        >
           <div>
             <h3 className="text-5xl font-extrabold text-blue-700">25,000+</h3>
             <p className="text-gray-600 mt-3 text-lg">Interns Placed</p>
@@ -93,7 +100,7 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Team Section with Subtle Background */}
+      {/* Team Section */}
       <section className="relative py-20 px-6 overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-10 z-0"
@@ -103,12 +110,16 @@ export default function AboutUs() {
           }}
         />
         <div className="relative z-10 max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-blue-700 mb-14">Meet the Team</h2>
+          <h2 className="text-4xl font-bold text-center text-blue-700 mb-14" data-aos="zoom-in">
+            Meet the Team
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
             {team.map((member, index) => (
               <div
                 key={index}
                 className="text-center hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-white p-6 rounded-xl border border-gray-100"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
               >
                 <img
                   src={member.image}
@@ -131,8 +142,8 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
-      <section className="bg-blue-700 text-white py-20 text-center relative">
+      {/* Call to Action */}
+      <section className="bg-blue-700 text-white py-20 text-center relative" data-aos="fade-in">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl font-bold mb-4">Ready to Launch Your Career?</h2>
           <p className="mb-6 text-lg">
