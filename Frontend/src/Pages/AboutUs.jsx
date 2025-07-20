@@ -1,24 +1,28 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import rohitImg from "../assets/rohit_img.jpg";
+import swarajImg from "../assets/swaraj_img.jpg";
+import manishImg from "../assets/manish_img.jpg";
+
 
 const team = [
   {
     name: "Rohit Yamgar",
     role: "Co-Founder & CEO",
-    image: "https://source.unsplash.com/featured/?man,ceo",
+    image: rohitImg,
     linkedin: "https://linkedin.com/in/rohit-yamgar",
   },
   {
     name: "Manish Patil",
     role: "Head of Engineering",
-    image: "Frontend/src/assets/manishphoto.jpeg",
+    image: manishImg,
     linkedin: "https://linkedin.com/in/manish-patil",
   },
   {
     name: "Swaraj Shedge",
     role: "Design Lead",
-    image: "https://source.unsplash.com/featured/?woman,designer",
+    image: swarajImg,
     linkedin: "https://linkedin.com/in/swaraj-shedge",
   },
 ];
