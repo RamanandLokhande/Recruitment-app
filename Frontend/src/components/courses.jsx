@@ -26,6 +26,18 @@ const courses = [
     description: "Design beautiful, user-friendly interfaces from scratch.",
     image: "https://images.pexels.com/photos/6593545/pexels-photo-6593545.jpeg",
   },
+  {
+    id: 5,
+    title: "DevOps Essentials",
+    description: "Learn CI/CD, Docker, Kubernetes & modern deployment pipelines.",
+    image: "https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg",
+  },
+  {
+    id: 6,
+    title: "AI & Machine Learning",
+    description: "Explore neural networks, deep learning, and model training.",
+    image: "https://images.pexels.com/photos/8369904/pexels-photo-8369904.jpeg",
+  },
 ];
 
 const cardVariants = {
@@ -34,7 +46,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.2,
+      delay: i * 0.15,
       duration: 0.6,
       ease: "easeOut",
     },
@@ -43,7 +55,7 @@ const cardVariants = {
 
 const Courses = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 p-8 md:p-16">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 px-6 py-16 md:px-16">
       <motion.h1
         className="text-4xl sm:text-5xl font-extrabold text-center mb-16 text-gray-800 tracking-tight"
         initial={{ opacity: 0, y: -30 }}
@@ -58,7 +70,7 @@ const Courses = () => {
         {courses.map((course, i) => (
           <motion.div
             key={course.id}
-            className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-transform hover:-translate-y-2"
+            className="bg-white/80 backdrop-blur-lg border border-gray-200 rounded-3xl shadow-xl overflow-hidden hover:shadow-2xl transition-transform hover:-translate-y-2 group"
             variants={cardVariants}
             initial="hidden"
             whileInView="visible"
@@ -69,11 +81,11 @@ const Courses = () => {
               <img
                 src={course.image}
                 alt={course.title}
-                className="w-full h-56 object-cover rounded-t-3xl transition-transform duration-300 hover:scale-105"
+                className="w-full h-56 object-cover rounded-t-3xl transition-transform duration-500 group-hover:scale-105"
               />
             </div>
             <div className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-3">
+              <h2 className="text-2xl font-semibold text-gray-800 mb-3 group-hover:text-blue-700 transition-colors">
                 {course.title}
               </h2>
               <p className="text-gray-600 mb-6 text-base leading-relaxed">
@@ -81,7 +93,8 @@ const Courses = () => {
               </p>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="bg-blue-600 w-full text-white py-3 rounded-xl text-lg font-medium hover:bg-blue-700 transition"
+                whileTap={{ scale: 0.95 }}
+                className="bg-gradient-to-r from-blue-600 to-indigo-600 w-full text-white py-3 rounded-xl text-lg font-semibold shadow hover:shadow-lg transition duration-300"
               >
                 Enroll Now
               </motion.button>
@@ -94,3 +107,4 @@ const Courses = () => {
 };
 
 export default Courses;
+
