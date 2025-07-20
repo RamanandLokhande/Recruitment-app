@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const courses = [
   {
@@ -27,17 +28,42 @@ const courses = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.2,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
+
 const Courses = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">
+      <motion.h1
+        className="text-4xl font-bold text-center mb-10 text-gray-800"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
         Our Courses
-      </h1>
+      </motion.h1>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        {courses.map((course) => (
-          <div
+        {courses.map((course, i) => (
+          <motion.div
             key={course.id}
-            className="bg-white rounded-2xl shadow-md overflow-hidden transition hover:shadow-xl"
+            className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            variants={cardVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            custom={i}
           >
             <img
               src={course.image}
@@ -49,11 +75,14 @@ const Courses = () => {
                 {course.title}
               </h2>
               <p className="text-gray-600 mb-4">{course.description}</p>
-              <button className="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition"
+              >
                 Enroll Now
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
