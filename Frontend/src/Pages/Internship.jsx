@@ -7,14 +7,14 @@ const internships = [
     company: 'TechNova',
     location: 'Remote',
     image:
-      'https://images.unsplash.com/photo-1581090700227-1d6c6f3f3b96?auto=format&fit=crop&w=800&q=80',
+      'https://plus.unsplash.com/premium_photo-1675793715030-0584c8ec4a13?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Data Analyst Intern',
     company: 'DataBridge',
     location: 'Bangalore, India',
     image:
-      'https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?auto=format&fit=crop&w=800&q=80',
+      'https://plus.unsplash.com/premium_photo-1726848121953-354d20f7f522?q=80&w=1102&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Marketing Intern',
@@ -28,7 +28,7 @@ const internships = [
     company: 'PixelCraft',
     location: 'Remote',
     image:
-      'https://images.unsplash.com/photo-1606761568499-a23fdb585f30?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1737619285988-e6f0f43a9981?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
   {
     title: 'Software Engineering Intern',
@@ -42,7 +42,7 @@ const internships = [
     company: 'PeopleFirst',
     location: 'Remote',
     image:
-      'https://images.unsplash.com/photo-1600195077072-91c9e9b0a8f3?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1698047681452-08eba22d0c64?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
   },
 ];
 
