@@ -88,12 +88,21 @@ export default function Login() {
         </button>
 
         {/* Sign Up Prompt */}
+<<<<<<< HEAD
         <p className="mt-6 text-sm text-center text-gray-600">
           New to Nextintern?{' '}
           <Link to="/signup" className="text-blue-700 font-semibold hover:underline">
             Join now
           </Link>
         </p>
+=======
+      <p className="mt-6 text-sm text-center text-gray-600">
+  New to Nextintern?{' '}
+  <Link to="/signup" className="text-blue-700 font-semibold hover:underline">
+    Join now
+  </Link>
+</p>
+>>>>>>> 3602ddec2cf514227c87eac216b1e3c742634416
       </div>
     </div>
   );

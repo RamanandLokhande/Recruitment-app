@@ -1,17 +1,28 @@
+
+
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaLinkedinIn
+} from 'react-icons/fa';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-300 pt-12 pb-6 px-6 mt-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-gray-900 text-gray-300 pt-16 pb-8 px-6 mt-20 relative overflow-hidden">
+      {/* Top border gradient */}
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500" />
 
-        {/* Company */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 z-10 relative">
+
+        {/* Company Info */}
         <div>
-          <h3 className="text-xl font-semibold text-white mb-4">Nextintern</h3>
-          <p className="text-sm text-gray-400">
+          <h3 className="text-2xl font-bold text-white mb-4">Nextintern</h3>
+          <p className="text-sm text-gray-400 leading-relaxed">
             Empowering students and graduates with the right opportunities in internships and placements.
           </p>
+          <p className="mt-4 text-sm text-gray-500">Join our mission to bridge the gap between learning and earning.</p>
         </div>
 
         {/* Quick Links */}
@@ -37,25 +48,33 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Follow Us */}
+        {/* Social & Subscribe */}
         <div>
           <h4 className="text-lg font-semibold text-white mb-3">Follow Us</h4>
-          <div className="flex space-x-4">
-            <a href="#" className="hover:text-white transition"><FaFacebookF /></a>
-            <a href="#" className="hover:text-white transition"><FaTwitter /></a>
-            <a href="#" className="hover:text-white transition"><FaInstagram /></a>
-            <a href="#" className="hover:text-white transition"><FaLinkedinIn /></a>
+          <div className="flex space-x-4 mb-4">
+            <a href="#" aria-label="Facebook" className="hover:text-white transition transform hover:scale-110">
+              <FaFacebookF className="w-5 h-5" />
+            </a>
+            <a href="#" aria-label="Twitter" className="hover:text-white transition transform hover:scale-110">
+              <FaTwitter className="w-5 h-5" />
+            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-white transition transform hover:scale-110">
+              <FaInstagram className="w-5 h-5" />
+            </a>
+            <a href="#" aria-label="LinkedIn" className="hover:text-white transition transform hover:scale-110">
+              <FaLinkedinIn className="w-5 h-5" />
+            </a>
           </div>
-          <p className="text-xs text-gray-500 mt-4">
-            Stay connected for updates and news.
-          </p>
+          <p className="text-xs text-gray-500">Stay connected for updates and news.</p>
         </div>
       </div>
 
+      {/* Divider */}
       <hr className="my-8 border-gray-700" />
 
+      {/* Footer Bottom */}
       <div className="text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} Nextintern. All rights reserved.
+        © {new Date().getFullYear()} <span className="text-white font-semibold">Nextintern</span>. All rights reserved.
       </div>
     </footer>
   );
