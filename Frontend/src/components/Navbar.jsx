@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 
-function Navbar() {
+const Navbar = () => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -15,7 +15,12 @@ function Navbar() {
     >
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <div className="text-2xl font-bold text-blue-600">Nextintern</div>
+        <div
+          className="text-2xl font-bold text-blue-600 cursor-pointer"
+          onClick={() => navigate('/')}
+        >
+          Nextintern
+        </div>
 
         {/* Hamburger Button (Small screens only) */}
         <button

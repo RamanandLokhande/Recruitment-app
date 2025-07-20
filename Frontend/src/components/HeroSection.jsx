@@ -36,7 +36,7 @@ const HeroSection = () => {
       </section>
 
       {/* 🚀 Blue highlight section */}
-      <section className="bg-blue-50 py-20 px-6 md:px-16 lg:px-32 text-center">
+      <section className="bg-gradient-to-br from-blue-100 via-white to-blue-50 py-20 px-6 lg:px-32 text-center">
         <motion.div
           className="max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
@@ -61,6 +61,12 @@ const HeroSection = () => {
               className="bg-blue-600 text-white px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-700 transition"
             >
               Get Started
+            </button>
+            <button
+              onClick={() => navigate('/aboutus')}
+              className="bg-white border border-blue-600 text-blue-600 px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-blue-50 transition"
+            >
+              Learn More
             </button>
           </motion.div>
         </motion.div>

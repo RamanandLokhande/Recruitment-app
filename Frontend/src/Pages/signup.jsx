@@ -75,7 +75,7 @@ export default function Signup() {
 
       <div className="relative z-10 w-full max-w-md bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-2xl">
         <div className="text-center mb-6">
-          <h1 className="text-3xl font-extrabold text-blue-700">Join Skillize</h1>
+          <h1 className="text-3xl font-extrabold text-blue-700">Join Nextintern</h1>
           <p className="text-sm text-gray-500">Where Skills Meet Opportunities</p>
         </div>
 
@@ -173,11 +173,11 @@ export default function Signup() {
 
         {/* Already have account */}
         <p className="mt-6 text-center text-sm text-gray-600">
-  Already a member?{' '}
-  <Link to="/login" className="text-blue-600 font-medium hover:underline">
-    Log In
-  </Link>
-</p>
+          Already a member?{' '}
+          <Link to="/login" className="text-blue-600 font-medium hover:underline">
+            Log In
+          </Link>
+        </p>
       </div>
     </div>
   );

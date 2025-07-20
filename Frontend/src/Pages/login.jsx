@@ -28,7 +28,7 @@ export default function Login() {
       <div className="relative z-10 w-full max-w-md bg-white p-8 rounded-xl shadow-2xl backdrop-blur-sm bg-opacity-90">
         {/* Brand */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-extrabold text-blue-700">Skillize</h1>
+          <h1 className="text-3xl font-extrabold text-blue-700">Nextintern</h1>
           <p className="text-sm text-gray-600">Where Skills Meet Opportunities</p>
         </div>
 
@@ -88,12 +88,12 @@ export default function Login() {
         </button>
 
         {/* Sign Up Prompt */}
-      <p className="mt-6 text-sm text-center text-gray-600">
-  New to Skillize?{' '}
-  <Link to="/signup" className="text-blue-700 font-semibold hover:underline">
-    Join now
-  </Link>
-</p>
+        <p className="mt-6 text-sm text-center text-gray-600">
+          New to Nextintern?{' '}
+          <Link to="/signup" className="text-blue-700 font-semibold hover:underline">
+            Join now
+          </Link>
+        </p>
       </div>
     </div>
   );
